@@ -36,6 +36,28 @@
 
     <p class="highlight">“Chemistry explains the invisible magic of our everyday world.”</p>
 </section>
+<script>
+  
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("fade-in");
+    });
+
+  
+    document.querySelectorAll("a").forEach(link => {
+        if (link.getAttribute("href") && !link.getAttribute("href").startsWith("#")) {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                const href = link.getAttribute("href");
+
+                document.body.classList.add("fade-out");
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 400);
+            });
+        }
+    });
+</script>
 
 
 </body>
