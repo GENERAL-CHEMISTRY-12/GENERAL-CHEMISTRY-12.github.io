@@ -59,3 +59,19 @@ button:hover {
 .highlight {
     color: #f5c542;
 }
+
+body {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+
+body.fade-in {
+    opacity: 1;
+}
+
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
